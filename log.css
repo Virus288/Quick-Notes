@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 7%;
+    font-size: large;
+}
+
+.new-user {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+}
+
+body {
+    margin-top: 6%;
+}
+
+@media screen and (max-width:950px) {
+    body {
+        margin-top: 9%;
+    }
+}
+
+@media screen and (max-width:570px) {
+    body {
+        margin-top: 14%;
+    }
+}
+
+@media screen and (max-width:350px) {
+    body {
+        margin-top: 17%;
+    }
+}

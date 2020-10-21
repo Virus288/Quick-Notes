@@ -1,0 +1,15 @@
+#Handle errors
+ErrorDocument 404 /404.php
+
+#Hide file extensions
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+# Apply above rules to files
+# NC = non capital = force all lowercase, L = Only for rules above
+RewriteRule ^product/([0-9]+)/?([0-9]+)? product.php?category=$1&model=$2 [NC,L]
+RewriteRule ^product product.php [NC,L]
+RewriteRule ^login login.php [NC,L]
+RewriteRule ^register register.php [NC,L]
+RewriteRule ^logout logout.php [NC,L]
