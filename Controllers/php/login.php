@@ -25,8 +25,8 @@ class UserLogin {
         $database -> close();
 
         if($this->errors){
-                return $this->errors;
-            } else {
+            return $this->errors;
+        } else {
             $_SESSION['Just_logged_in'] = true;
             header('Location: /');
             exit();
@@ -34,10 +34,10 @@ class UserLogin {
     }
 
     private function CheckForUsers($Data){
-		  if(!$Data['username'])
-		  {
-              $this->addError("username", 'Invalid username');
-		  }
+        if(!$Data['username'])
+        {
+            $this->addError("username", 'Invalid username');
+        }
     }
 
     private function ValidatePassword($Data){

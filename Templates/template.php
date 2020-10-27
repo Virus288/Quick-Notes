@@ -15,13 +15,10 @@
                     <meta name="description" content="This is notebook app">
                     <meta name="keywords" content="Notebook">
                     
-                    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">';
-                    if($_SERVER['SCRIPT_NAME'] == '/login.php'){
-                        echo '<link rel="stylesheet" type="text/css" href="./log.css">';
-                    } else {
-                        echo '<link rel="stylesheet" type="text/css" href="./style.css">';
-                    }
-                    echo '</head>
+                    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+                    <link rel="stylesheet" type="text/css" href="./style.css">
+                    </head>
+                <body>
                 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
                   <a class="navbar-brand" href="/">';
             if(isset($_SESSION['is_logged_in'])) {
@@ -44,9 +41,12 @@
                     </ul>';
             } else {
                echo '
-               <li class="nav-item active">
+                    <li class="nav-item active">
                         <a class="nav-link" href="logout">Logout<span class="sr-only">(current)</span></a>
-                      </li>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="addnote">Add Note<span class="sr-only">(current)</span></a>
+                    </li>
                ';
             }
                     echo '
@@ -67,6 +67,17 @@
                 </html>
                 ';
         }
+
+        public function Logged(){
+            echo '
+                <div class="notesMenu"></div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        getNotes("'; echo $_SESSION['username']; echo '")
+                    }, false);
+                </script>';
+        }
+
     }
 
 ?>

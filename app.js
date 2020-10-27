@@ -6,7 +6,7 @@ const getNotes = (username) => {
     }
 
     const getProducts = async (username) => {
-        const Url = '/Controllers/php/products.php?author=' + username;
+        const Url = '/Controllers/php/notes.php?author=' + username;
         const response = await fetch(Url);
 
 
@@ -18,10 +18,12 @@ const getNotes = (username) => {
     }
 
     const WriteData = (data) => {
+        let menu = document.querySelector('.notesMenu');
         for (let Data in data) {
-            console.log(data[Data])
+            menu.innerHTML +=  '<div class="notes"><textarea  onkeyup="this.style.height=\'24px\'; this.style.height = this.scrollHeight + 12 + \'px\';" style="overflow: hidden; background: #f7e876; text-align: center; border: none; border-bottom: 2px solid grey;">'+ data[Data].title +'</textarea><textarea onkeyup="this.style.height=\'24px\'; this.style.height = this.scrollHeight + 12 + \'px\';" style="overflow: hidden; background: #f7e876; text-align: start; border: none; border-bottom: 2px solid grey;">'+ data[Data].title +'</textarea></div>';
+            console.log(data[Data]);
         }
     }
 
-    GetData(username)
+    GetData(username);
 }

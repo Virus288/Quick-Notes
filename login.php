@@ -17,11 +17,6 @@ if(isset($_POST['submit'])){
     $errors = $login->Login();
 }
 
-?>
-
-<?php
-session_start();
-
 include ('Templates/template.php');
 $Template = new Template;
 $Template->Header();

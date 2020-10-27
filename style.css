@@ -9,8 +9,6 @@ body {
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
     width: 100%;
     height: 7%;
     font-size: large;
@@ -22,8 +20,6 @@ body {
 
 .menu {
     height: 100vh;
-    padding: 0;
-    margin: 0;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -32,6 +28,30 @@ body {
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+}
+
+.notesMenu {
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.notes {
+    font-size: large;
+    margin-right: 2%;
+    margin-left: 2%;
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    text-align: center;
+    background: yellow;
+    border: 1px solid grey;
 }
 
 .intro {
@@ -57,9 +77,5 @@ body {
     align-items: center;
     flex-flow: column wrap;
     justify-content: space-evenly;
-    text-align: center;
-}
-
-.footer {
     text-align: center;
 }

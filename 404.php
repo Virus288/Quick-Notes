@@ -12,5 +12,4 @@ $Template->Header();
 <?php
 $Template->Footer();
 ?>
-</body>
 </html>

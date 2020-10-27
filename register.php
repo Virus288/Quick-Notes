@@ -17,17 +17,10 @@ if(isset($_POST['submit'])){
     $errors = $validation->validateForm();
 }
 
-?>
-
-<?php
-session_start();
-
 include ('Templates/template.php');
 $Template = new Template;
 $Template->Header();
 ?>
-
-<body>
 
 <div class="new-user">
     <h2>Create a new user</h2>
